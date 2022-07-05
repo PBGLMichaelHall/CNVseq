@@ -1,0 +1,17 @@
+Package: CNV
+Type: Package
+Title: Plotting Copy Number Variants after Sam files have been processed by bin-by-sam_2.0.py
+Version: 0.1
+Date: 07-4-2022
+Authors@R: person("Michael David", "Hall", email = "michaelhall532@gmail.com", role = c("aut", "cre"))
+BugReports: https://github.com/BugReports: https://github.com/PBGLMichaelHall/CNVseq/issues
+Description: This analysis tool can plot copy number varaint ratios between "mutant" and "control" samples
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    ggplot2 (>= 2.2.0),
+    dplyr
+RoxygenNote: 7.2.0
+biocViews: Software, Sequencing, Visualization
+VignetteBuilder: rmarkdown

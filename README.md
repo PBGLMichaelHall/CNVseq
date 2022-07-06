@@ -27,6 +27,7 @@ CNV::CNV(file = "N3_100kbin.txt",c("Chr04","Chr05","Chr09"))
 ```
 
 
+![Rplot7](https://user-images.githubusercontent.com/93121277/177502957-5fcd2d51-debe-4091-83da-6030f82d47a8.png)
 
-![Rplot](https://user-images.githubusercontent.com/93121277/177341277-c8aeb48c-d44e-45e5-a79c-fcc59339d0d3.png)
+
 

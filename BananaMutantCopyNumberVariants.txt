@@ -1,0 +1,115 @@
+Banana Workflow
+
+mkdir Home_Banana
+cd Home_Banana
+
+#Download Mutant Strain and Control Strain Banana Fastq from NCBI
+
+#Find NCBI path
+#Novaria (Mutant Variety) Sample 3
+
+srapath SRR11579627
+
+wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos3/sra-pub-run-21/SRR11579627/SRR11579627.1
+
+#Convert SRA into fastq
+fastq-dump --split-3 SRR11579627
+ls
+
+#Find NCBI path
+#Grande Naine (Control) Sample 2
+
+srapath SRR11579628
+
+wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos3/sra-pub-run-21/SRR11579628/SRR11579628.1
+
+#Convert SRA into fastq
+fastq-dump --split-3 SRR11579628
+ls
+
+#Rename fastq files Novaria.R1.fq.gz Novaria.R2.fq.gz
+#Rename fastq files Naine.R1.fq.gz Naine.R1.fq.gz
+
+#Remove Duplicates
+#Download and Install BBmap
+https://sourceforge.net/projects/bbmap/
+
+#Extract files from tar file
+tar -xvf *.tar.gz
+
+#Search help flag in clumpify script
+
+clumpify.sh --help
+
+./clumpify.sh in=../Novaria.R1.fastq in2=../Novaria.R2.fastq out=../Novaira.R1.dedup.fastq out2=../Novaria.R2.dedup.fastq dedupe
+
+./clumpify.sh in=../Naine.R1.fastq in2=../Naine.R2.fastq out=../Naine.R1.dedup.fastq out2=../Naine.R2.dedup.fastq dedupe
+
+
+#Download Reference Genome NCBI
+
+https://www.ncbi.nlm.nih.gov/assembly/GCF_000313855.2
+
+mkdir BananaGamma 
+mv Novaria.R1.dedup.fastq.gz Novaria.R2.dedup.fastq.gz BananaGamma/
+mv Naine.R1.dedup.fastq.gz Naine.R2.dedup.fastq.gz BananaGamma/
+cd BananaGamma
+
+mkdir Genome
+mv *.fna Genome/
+cd Genome bwa index *.fna
+
+cd ../
+
+https://github.com/lh3/bwa
+
+git clone https://github.com/lh3/bwa.git
+cd bwa; make
+./bwa 
+#Needs to be Harvard Version
+
+./bwa mem -M -t 4 ../Genome/*.fna Novaria.R2.dedup.fq Novaria.R2.dedup.fq > Novaria.dedup.sam
+
+./bwa mem -M -t 4 Genome/*.fna Naine.R1.dedup.fastq.gz Naine.R2.dedup.fastq.gz > Naine.dedup.sam
+
+samtools sort -O sam -T sam -T Novaria.sort -o Novaria_aln.sam Novaria.dedup.sam
+samtools sort -O sam -T sam -T Naine.sort -o Naine_aln.sam Naine.dedup.sam
+
+samtools view -b Novaria.dedup.sam > Novaria.bam
+samtools view -b Naine.dedup.sam > Naine.bam
+
+samtools index Novaria.bam
+samtools index Naine.bam
+
+
+# Download Bin-by-Sam-tool
+https://u.pcloud.link/publink/show?code=kZLR1xXZWNCbL3m6HK7wRt50OvDfe8tGb9Mk
+
+mv Novaria_aln.sam Naine_aln.sam Bin-by-Sam-tool/
+cd Bin-by-Sam-tool
+python bin-by-sam_2.0.py -o N3_100kbin.txt -s 100000 -b -p 3 -c Naine_.aln.sam
+
+#import data to R
+# Select Column N3/G2 and plot
+
+mkdir IGVGenome
+cp *.fna IGVGenome/
+#rename .fna ---> .fa
+cd IGVGenome
+samtools faidx genome.fa
+#Open IGV select both .fa and .fa.fai with Novaria.bam and Naine.bam
+
+
+
+
+
+
+
+
+#####################################################################################
+#Try to convert existing bam files from Sorghum to sam
+samtools view -h -o ControlSample_aln.sam Sample1.bam
+samtools view -h -o Mutant_aln.sam Sample2.bam
+
+cd Bin-by-Sam-tool
+python bin-by-sam_2.0.py -o N3_100kbin.txt -s 100000 -b -p 3 -c ControlSample_.aln.sam

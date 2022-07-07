@@ -17,7 +17,7 @@ CNV <- function(file = NA, Chromosome = NA,mutantname = NA, controlname = NA){
   
   c <- ggplot(data = table, mapping = aes(x=Strt, y = !! y))
   d <- c + geom_point(color = "black") + facet_grid(~Chrom) + ggplot2::ggtitle("Copy Number Variation Control Sample") + ylab("CNV Ratio") + xlab("Position")
-  c <- c + geom_point() + geom_point(mapping = aes(x= Strt, y = !! z), color = "red",size=0.25) + facet_grid(~Chrom) 
+  c <- c + geom_point() + geom_point(mapping = aes(x= Strt, y = !! z), color = "red",size=0.65) + facet_grid(~Chrom) 
   c <- c + ggplot2::ggtitle("Copy Number Variation Mutant and Control Sample") + ylab("CNV Ratio") + xlab("Position")
   print(d)
   print(c)

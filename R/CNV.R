@@ -18,6 +18,7 @@ CNV <- function(file = NA, Chromosome = NA,mutantname = NA, controlname = NA,siz
   y <- rlang::sym(quo_name(enquo(mutantname)))
   z <- rlang::sym(quo_name(enquo(controlname)))
   str(table)
+  table <- na.omit(table)
   p <- ggplot2::ggplot(data = table) + ggplot2::scale_x_continuous(breaks = seq(from = 0, to = max(round(table$End),0), by = 10^(floor(log10(max(table$End))))), labels = format_genomic(), name = "Genomic Position (Mb)") + ggplot2::theme(plot.margin = ggplot2::margin(b = 10,l = 20, r = 20, unit = "pt"))
   p <- p + ggplot2::geom_point(ggplot2::aes_string(x=table$Strt, y = y), color="red") + ggplot2::geom_point(ggplot2::aes_string(x=table$Strt, y = z), color = color,size = size,alpha=alpha) + facet_grid(~Chrom) + ggplot2::ggtitle("Copy Number Variation Control Sample") + ylab("CNV Ratio") + xlab("Position")
   

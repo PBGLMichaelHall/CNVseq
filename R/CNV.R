@@ -10,7 +10,7 @@
 #' @export CNV
 
 
-CNV <- function(file = NA, Chromosome = NA,mutantname = NA, controlname = NA,size=NA,alpha=N){
+CNV <- function(file = NA, Chromosome = NA,mutantname = NA, controlname = NA,size=NA,alpha=N,color=NA){
   table <- read.table(file = file, header = TRUE)
   table <- table %>% dplyr::filter(Chrom %in% Chromosome)
   table[,7] <- as.numeric(table[,7])

@@ -10,7 +10,8 @@ CNV(
   mutantname = NA,
   controlname = NA,
   size = NA,
-  alpha = N
+  alpha = N,
+  color = NA
 )
 }
 \arguments{

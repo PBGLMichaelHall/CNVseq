@@ -26,22 +26,23 @@ devtools::install_github("PBGLMichaelHall/CNVseq")
 setwd("/home/michael/Desktop/Banana/Banana_LC_WGS")
 devtools::install_github(repo = "PBGLMichaelHall/CNVseq",force = TRUE)
 library(CNV)
-CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025202.1","NC_025203.1","NC_025203.1","NC_025204.1","NC_025205.1","NC_025206.1","NC_025207.1","NC_025208.1","NC_025209.1","NC_025210.1","NC_025211.1","NC_025212.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = .25)
+CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025202.1","NC_025203.1","NC_025203.1","NC_025204.1","NC_025205.1","NC_025206.1","NC_025207.1","NC_025208.1","NC_025209.1","NC_025210.1","NC_025211.1","NC_025212.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = .25,color="green")
 
 
 ```
-![Screenshot from 2022-07-07 10-27-12](https://user-images.githubusercontent.com/93121277/177728255-62698bfb-3786-4387-ac1a-bb95dc90a6c7.png)
+![777](https://user-images.githubusercontent.com/93121277/177731532-046119d9-b802-4fa1-af91-a88e4eff7022.png)
 
 
 # Now Chromosome 5
 
 ```r 
 
-CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025206.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = .25)
+CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025206.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = .25,color="green")
 
 ```
 
-![CNVplotBANA](https://user-images.githubusercontent.com/93121277/177727595-43988650-970d-43a9-a70d-34e317ad0e24.png)
+
+![Rplot777](https://user-images.githubusercontent.com/93121277/177731971-698c6ff6-bce9-4442-8d12-310344da5d37.png)
 
 
 
@@ -50,23 +51,27 @@ CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025206.1"),mutantname = "No
 
 #Sorghum CNV
 setwd("/home/michael/Desktop/SorghumBinBySam")
-CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr04","Chr05","Chr09"),mutantname = "con.2.NA",controlname = "D2.2.NA",size = .75,alpha = .25)
+CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr04","Chr05","Chr09"),mutantname = "con.2.NA",controlname = "D2.2.NA",size = .75,alpha = 5.0,color="green")
 
 
 
 ```
-![99](https://user-images.githubusercontent.com/93121277/177728392-50efb398-b35d-4ecc-afee-a00b4ccbf9a2.png)
+
+![Screenshot from 2022-07-07 10-47-11](https://user-images.githubusercontent.com/93121277/177732226-d01f0a94-76c4-4a94-b95b-efff8d06369f.png)
+
 
 
 
 # Chromosome 9
 
 ```r
-CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr09"),mutantname = "con.2.NA",controlname = "D2.2.NA",size = .75,alpha = .25)
+CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr09"),mutantname = "con.2.NA",controlname = "D2.2.NA",size = .75,alpha = 5.0)
 
 ```
 
-![ch9](https://user-images.githubusercontent.com/93121277/177728520-774759be-2e2f-4acd-9e1d-9edad730289a.png)
+
+![Rplot01](https://user-images.githubusercontent.com/93121277/177732470-bb9f650a-7595-428d-95b8-34f300c561a2.png)
+
 
 
 

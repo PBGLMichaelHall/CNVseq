@@ -1,3 +1,9 @@
+#' @name format_genomic
+#' @title format_genomic
+#' @description A function used to plot genomic positions
+#' @export format_genomic
+
+
 format_genomic <- function(...) {
   # Format a vector of numeric values according
   # to the International System of Units.

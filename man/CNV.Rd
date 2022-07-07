@@ -4,7 +4,14 @@
 \alias{CNV}
 \title{CNV}
 \usage{
-CNV(file = NA, Chromosome = NA, mutantname = NA, controlname = NA)
+CNV(
+  file = NA,
+  Chromosome = NA,
+  mutantname = NA,
+  controlname = NA,
+  size = NA,
+  alpha = N
+)
 }
 \arguments{
 \item{file}{Provide text file produced by bin-by-sam_2.0.py}
@@ -14,6 +21,10 @@ CNV(file = NA, Chromosome = NA, mutantname = NA, controlname = NA)
 \item{mutantname}{Specify the mutant sample name hint:Look at header of column 7 in the output file from bin-by-sam_2.0.py}
 
 \item{controlname}{Specify the mutant sample name hint:Look at header of column 6 in the output file from bin-by-sam_2.0.py}
+
+\item{size}{Specify size of control sample ("yellow points")}
+
+\item{alpha}{Specify transparency level of control sample}
 }
 \description{
 Plots Copy Number Variants after Sam files have been processed by bin-by-sam_2.0.py

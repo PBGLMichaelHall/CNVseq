@@ -26,21 +26,22 @@ devtools::install_github("PBGLMichaelHall/CNVseq")
 setwd("/home/michael/Desktop/Banana/Banana_LC_WGS")
 devtools::install_github(repo = "PBGLMichaelHall/CNVseq",force = TRUE)
 library(CNV)
-CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025202.1","NC_025203.1","NC_025203.1","NC_025204.1","NC_025205.1","NC_025206.1",
-"NC_025207.1","NC_025208.1","NC_025209.1","NC_025210.1","NC_025211.1","NC_025212.1"),
-mutantname = "Novaria.Naine",controlname = "Naine.Naine")
+CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025202.1","NC_025203.1","NC_025203.1","NC_025204.1","NC_025205.1","NC_025206.1","NC_025207.1","NC_025208.1","NC_025209.1","NC_025210.1","NC_025211.1","NC_025212.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = .25)
+
 
 ```
+![Screenshot from 2022-07-07 10-27-12](https://user-images.githubusercontent.com/93121277/177728255-62698bfb-3786-4387-ac1a-bb95dc90a6c7.png)
 
-![BananaCNV7](https://user-images.githubusercontent.com/93121277/177549914-f02ee72b-5c3a-430d-8adb-2e78347ccfcc.png)
 
 # Now Chromosome 5
 
 ```r 
-CNV::CNV(file = "N3_100kbin.txt",Chromosome = "NC_025206.1",mutantname = "Novaria.Naine",controlname = "Naine.Naine")
+
+CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025206.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = .25)
+
 ```
 
-![Banana99](https://user-images.githubusercontent.com/93121277/177550655-18158d51-8fe1-452e-9b4c-3c45104092d6.png)
+![CNVplotBANA](https://user-images.githubusercontent.com/93121277/177727595-43988650-970d-43a9-a70d-34e317ad0e24.png)
 
 
 
@@ -49,13 +50,23 @@ CNV::CNV(file = "N3_100kbin.txt",Chromosome = "NC_025206.1",mutantname = "Novari
 
 #Sorghum CNV
 setwd("/home/michael/Desktop/SorghumBinBySam")
-CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr04","Chr05","Chr09"),mutantname = "con.2.NA",controlname = "D2.2.NA")
+CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr04","Chr05","Chr09"),mutantname = "con.2.NA",controlname = "D2.2.NA",size = .75,alpha = .25)
+
 
 
 ```
+![99](https://user-images.githubusercontent.com/93121277/177728392-50efb398-b35d-4ecc-afee-a00b4ccbf9a2.png)
 
 
-![SorghumCNV7](https://user-images.githubusercontent.com/93121277/177549933-5e437ef6-6a67-4673-9994-197cde0e34bc.png)
+
+# Chromosome 9
+
+```r
+CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr09"),mutantname = "con.2.NA",controlname = "D2.2.NA",size = .75,alpha = .25)
+
+```
+
+![ch9](https://user-images.githubusercontent.com/93121277/177728520-774759be-2e2f-4acd-9e1d-9edad730289a.png)
 
 
 

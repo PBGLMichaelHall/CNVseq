@@ -11,7 +11,7 @@ CNV <- function(file = NA, Chromosome = NA,mutantname = NA, controlname = NA){
   table <- read.table(file = file, header = TRUE)
   table <- table %>% dplyr::filter(Chrom %in% Chromosome)
   table[,7] <- as.numeric(table[,7])
-  table[,6] <- as.numeric(table[,7])
+  table[,6] <- as.numeric(table[,6])
   y <- rlang::sym(quo_name(enquo(mutantname)))
   z <- rlang::sym(quo_name(enquo(controlname)))
   

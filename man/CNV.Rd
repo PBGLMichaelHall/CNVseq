@@ -25,6 +25,8 @@ CNV(
 \item{size}{Specify size of control sample ("yellow points")}
 
 \item{alpha}{Specify transparency level of control sample}
+
+\item{color}{Specify color of control sample}
 }
 \description{
 Plots Copy Number Variants after Sam files have been processed by bin-by-sam_2.0.py

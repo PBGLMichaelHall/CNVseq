@@ -11,10 +11,10 @@
 
 
 CNV <- function(file = NA, Chromosome = NA,mutantname = NA, controlname = NA,size=NA,alpha=N,color=NA){
-  table <<- read.table(file = file, header = TRUE)
-  table <<- table %>% dplyr::filter(Chrom %in% Chromosome)
-  table[,7] <<- as.numeric(table[,7])
-  table[,6] <<- as.numeric(table[,6])
+  table <- read.table(file = file, header = TRUE)
+  table <- table %>% dplyr::filter(Chrom %in% Chromosome)
+  table[,7] <- as.numeric(table[,7])
+  table[,6] <- as.numeric(table[,6])
   y <- rlang::sym(quo_name(enquo(mutantname)))
   z <- rlang::sym(quo_name(enquo(controlname)))
   str(table)
@@ -25,5 +25,7 @@ CNV <- function(file = NA, Chromosome = NA,mutantname = NA, controlname = NA,siz
   #d <- geom_point(mapping = aes(x= Strt, y = !! z), color = "black",size=0.65) + facet_grid(~Chrom) 
   #print(d)
   print(p)
+  assign("table", value = table, envir = globalenv())
   return(table)
 }
+

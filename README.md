@@ -1,11 +1,15 @@
-#CNVseq Analysis Banana and Sorghum
-#Banana
-**Procure yourraw FASTQ reads from NCBI of two Banana samples, one is a known mutant Novaria and the other is a wildtype Naine and follow the protocol.**# 
+**CNVseq Analysis Banana and Sorghum**
 
-#Efficient Screening Techniques to Identify Mutants with TR4 Resistance in Banana
+
+**Banana**
+
+**Procure your raw FASTQ reads from NCBI of two Banana samples, one is a known mutant Novaria and the other is a wildtype Naine and follow the protocol.**
+**Efficient Screening Techniques to Identify Mutants with TR4 Resistance in Banana**
 p.117 - 127
-#Use clumpify script to remove duplicates
+**Use clumpify script to remove duplicates**
 
+
+(https://www.ncbi.nlm.nih.gov/bioproject/PRJNA627139)
 
 # Download the r package
 

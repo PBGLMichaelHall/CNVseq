@@ -1,23 +1,12 @@
-# CNVseq
+#CNVseq Analysis Banana and Sorghum
+#Banana
+**Procure yourraw FASTQ reads from NCBI of two Banana samples, one is a known mutant Novaria and the other is a wildtype Naine and follow the protocol.**# 
 
-# You have two BAM files one is a "mutant" and the other is a "control"
+#Efficient Screening Techniques to Identify Mutants with TR4 Resistance in Banana
+p.117 - 127
+#Use clumpify script to remove duplicates
 
-# First convert BAM to SAM
-# The sam file must have an ending _aln.sam to work properly in python script
 
-# CONTROL
-samtools view -h con-2_S1-Chromes-04-05-09.bam > con-2_S1-Chromes-04-05-09_aln.sam
-
-# MUTANT
-
-samtools view -h D2-1_S7-Chromes-04-05-09.bam > D2-1_S7-Chromes-04-05-09_aln.sam
-
-# Call the python script
-```r
-
-$python bin-by-sam_2.0.py -o N3_100kbin.txt -s 100000 -b -p 3 -c con-2_S1-Chromes-04-05-09_aln.sam
-
-```
 # Download the r package
 
 ```r
@@ -49,7 +38,24 @@ CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025206.1"),mutantname = "No
 
 ```r
 
+# You have two BAM files one is a "mutant" and the other is a "control"
 
+# First convert BAM to SAM
+# The sam file must have an ending _aln.sam to work properly in python script
+
+# CONTROL
+samtools view -h con-2_S1-Chromes-04-05-09.bam > con-2_S1-Chromes-04-05-09_aln.sam
+
+# MUTANT
+
+samtools view -h D2-1_S7-Chromes-04-05-09.bam > D2-1_S7-Chromes-04-05-09_aln.sam
+
+# Call the python script
+```r
+
+$python bin-by-sam_2.0.py -o N3_100kbin.txt -s 100000 -b -p 3 -c con-2_S1-Chromes-04-05-09_aln.sam
+
+```
 #Sorghum CNV
 setwd("/home/michael/Desktop/SorghumBinBySam")
 CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr04","Chr05","Chr09"),mutantname = "con.2.NA",controlname = "D2.2.NA",size = .75,alpha = 5.0,color="green")

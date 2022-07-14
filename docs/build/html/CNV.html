@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Prerequisites &mdash; CopyNumberVariantsSequenceAnalysis 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to CopyNumberVariantsSequenceAnalysis’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> CopyNumberVariantsSequenceAnalysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Software Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#rename-fastq">Rename FASTQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#standard-output-clumpify-python">Standard Output Clumpify python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#download-reference-genome-ncbi">Download Reference Genome NCBI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#download-the-r-package-rom-pbglmichael-cnvseq-repository">Download the r package rom PBGLMichael/CNVseq repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#chromosome-5">Chromosome 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#bin-by-sam-2-0-py-python-script">bin-by-sam_2.0.py python script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#chromosome-9">Chromosome 9</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CopyNumberVariantsSequenceAnalysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Software Prerequisites</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/CNV.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>==================================
+CNVseq Analysis Banana and Sorghum
+==================================</p>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Michael Hall</p>
+</dd>
+<dt class="field-even">Date</dt>
+<dd class="field-even"><p>07/14/2022</p>
+</dd>
+</dl>
+<section id="software-prerequisites">
+<h1>Software Prerequisites</h1>
+<p>#Burrows-Wheeler-Aligner
+(<a class="reference external" href="http://bio-bwa.sourceforge.net/)(see">http://bio-bwa.sourceforge.net/)(see</a> line 126).
+#Download and Install BBmap
+<a class="reference external" href="https://sourceforge.net/projects/bbmap/">https://sourceforge.net/projects/bbmap/</a>
+Bin-by-Sam-tool (see github repository)
+Python version 2.7(See enivornment .yaml)</p>
+<p><strong>Banana</strong></p>
+<p><strong>Procure your raw FASTQ reads from NCBI of two Banana samples, one is a known mutant Novaria and the other is a wildtype Naine and follow the protocol.</strong>
+<strong>Efficient Screening Techniques to Identify Mutants with TR4 Resistance in Banana</strong>
+p.117 - 127
+<strong>Use clumpify script to remove duplicates</strong></p>
+<p>(<a class="reference external" href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA627139">https://www.ncbi.nlm.nih.gov/bioproject/PRJNA627139</a>)</p>
+<p>#Download sratools</p>
+<p>srapath SRR11579627</p>
+<p>prefetch SRR11579627</p>
+<p>wget <a class="reference external" href="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos3/sra-pub-run-21/SRR11579627/SRR11579627.1">https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos3/sra-pub-run-21/SRR11579627/SRR11579627.1</a></p>
+<p>#Convert SRA into fastq</p>
+<p>fastq-dump –split-3 SRR11579627</p>
+<p>srapath SRR11579628</p>
+<p>prefetch SRR11579628</p>
+<p>wget <a class="reference external" href="https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos3/sra-pub-run-21/SRR11579628/SRR11579628.1">https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos3/sra-pub-run-21/SRR11579628/SRR11579628.1</a></p>
+<p>#Convert SRA into fastq</p>
+<p>fastq-dump –split-3 SRR11579628</p>
+</section>
+<section id="rename-fastq">
+<h1>Rename FASTQ</h1>
+<p><strong>Naine.R1.fq.gz</strong>
+<strong>Naine.R2.fq.gz</strong>
+<strong>Novaria.R1.fq.gz</strong>
+<strong>Novaria.R2.fq.gz</strong></p>
+<p><strong>Run the clumpify python script to remove duplicates per sample.</strong></p>
+<p>./clumpify.sh in=Naine.R1.fq.gz in2=Naine.R2.fq.gz out=Naine.R1.
+dedup.fastq.gz out2=Naine.R2.dedup.fastq.gz dedupe=t</p>
+<p>./clumpify.sh in=Novaria.R1.fq.gz in2=Novaria.R2.fq.gz out=Novaria.R1.
+dedup.fastq.gz out2=Novaria.R2.dedup.fastq.gz dedupe=t</p>
+</section>
+<section id="standard-output-clumpify-python">
+<h1>Standard Output Clumpify python</h1>
+<p>Done!
+Time:                           31.447 seconds.
+Reads Processed:         6262k  199.16k reads/sec
+Bases Processed:         1885m  59.94m bases/sec</p>
+<p>Reads In:              6262958
+Clumps Formed:         1730359
+Duplicates Found:         3782
+Reads Out:             6259176
+Bases Out:          1884185686
+Total time:     51.345 seconds.</p>
+<p><strong>NOVARIA</strong></p>
+<p>Done!
+Time:                           29.438 seconds.
+Reads Processed:         6000k  203.82k reads/sec
+Bases Processed:         1837m  62.43m bases/sec</p>
+<p>Reads In:              6000036
+Clumps Formed:         1648176
+Duplicates Found:         2026
+Reads Out:             5998010
+Bases Out:          1837286910
+Total time:     50.222 seconds.</p>
+</section>
+<hr class="docutils" />
+<section id="download-reference-genome-ncbi">
+<h1>Download Reference Genome NCBI</h1>
+<p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/assembly/GCF_000313855.2">https://www.ncbi.nlm.nih.gov/assembly/GCF_000313855.2</a></p>
+<p>mkdir BananaGamma
+mv Novaria.R1.dedup.fastq.gz Novaria.R2.dedup.fastq.gz BananaGamma/
+mv Naine.R1.dedup.fastq.gz Naine.R2.dedup.fastq.gz BananaGamma/
+cd BananaGamma</p>
+<p>mkdir Genome
+mv <a href="#id1"><span class="problematic" id="id2">*</span></a>.fna Genome/
+cd Genome bwa index <a href="#id3"><span class="problematic" id="id4">*</span></a>.fna</p>
+<p>cd ../</p>
+<p><a class="reference external" href="https://github.com/lh3/bwa">https://github.com/lh3/bwa</a></p>
+<p>git clone <a class="reference external" href="https://github.com/lh3/bwa.git">https://github.com/lh3/bwa.git</a>
+cd bwa; make
+./bwa
+#Needs to be Harvard Version</p>
+<p>./bwa mem -M -t 4 ../Genome/<a href="#id5"><span class="problematic" id="id6">*</span></a>.fna Novaria.R2.dedup.fq Novaria.R2.dedup.fq &gt; Novaria.dedup.sam</p>
+<p>./bwa mem -M -t 4 Genome/<a href="#id7"><span class="problematic" id="id8">*</span></a>.fna Naine.R1.dedup.fastq.gz Naine.R2.dedup.fastq.gz &gt; Naine.dedup.sam</p>
+<p>samtools sort -O sam -T sam -T Novaria.sort -o Novaria_aln.sam Novaria.dedup.sam
+samtools sort -O sam -T sam -T Naine.sort -o Naine_aln.sam Naine.dedup.sam</p>
+<p>samtools view -b Novaria.dedup.sam &gt; Novaria.bam
+samtools view -b Naine.dedup.sam &gt; Naine.bam</p>
+<p>samtools index Novaria.bam
+samtools index Naine.bam</p>
+<p>mv Novaria_aln.sam Naine_aln.sam Bin-by-Sam-tool/
+cd Bin-by-Sam-tool
+python bin-by-sam_2.0.py -o N3_100kbin.txt -s 100000 -b -p 3 -c <a href="#id9"><span class="problematic" id="id10">Naine_</span></a>.aln.sam</p>
+</section>
+<section id="download-the-r-package-rom-pbglmichael-cnvseq-repository">
+<h1>Download the r package rom PBGLMichael/CNVseq repository</h1>
+<p>devtools::install_github(“PBGLMichaelHall/CNVseq”)
+# Banana CNV
+setwd(“/home/michael/Desktop/Banana/Banana_LC_WGS”)
+devtools::install_github(repo = “PBGLMichaelHall/CNVseq”,force = TRUE)
+library(CNV)
+CNV::CNV(file = “N3_100kbin.txt”,Chromosome =  c(“NC_025202.1”,”NC_025203.1”,”NC_025203.1”,”NC_025204.1”,”NC_025205.1”,”NC_025206.1”,”NC_025207.1”,”NC_025208.1”,”NC_025209.1”,”NC_025210.1”,”NC_025211.1”,”NC_025212.1”),mutantname = “Novaria.Naine”,controlname = “Naine.Naine”,size = .75,alpha = .25,color=”green”)</p>
+<figure class="align-default">
+<img alt="_images/777.png" src="_images/777.png" />
+</figure>
+</section>
+<section id="chromosome-5">
+<h1>Chromosome 5</h1>
+<p>CNV::CNV(file = “N3_100kbin.txt”,Chromosome =  c(“NC_025206.1”),mutantname = “Novaria.Naine”,controlname = “Naine.Naine”,size = .75,alpha = .25,color=”green”)</p>
+<figure class="align-default">
+<img alt="_images/Rplot777.png" src="_images/Rplot777.png" />
+</figure>
+<p><strong>You have two BAM files one is a “mutant” and the other is a “control”</strong></p>
+<p><strong>First convert BAM to SAM</strong>
+<strong>The sam file must have an ending _aln.sam to work properly in python script</strong></p>
+<p><strong>CONTROL</strong></p>
+<p>samtools view -h con-2_S1-Chromes-04-05-09.bam &gt; con-2_S1-Chromes-04-05-09_aln.sam</p>
+<p><strong>MUTANT</strong></p>
+<p>samtools view -h D2-1_S7-Chromes-04-05-09.bam &gt; D2-1_S7-Chromes-04-05-09_aln.sam</p>
+</section>
+<section id="bin-by-sam-2-0-py-python-script">
+<h1>bin-by-sam_2.0.py python script</h1>
+<p>$python bin-by-sam_2.0.py -o N3_100kbin.txt -s 100000 -b -p 3 -c con-2_S1-Chromes-04-05-09_aln.sam</p>
+<p><strong>Sorghum CNV</strong></p>
+<p>setwd(“/home/michael/Desktop/SorghumBinBySam”)
+CNV::CNV(file = “N3_100kbin.txt”,Chromosome = c(“Chr04”,”Chr05”,”Chr09”),mutantname = “con.2.NA”,controlname = “D2.2.NA”,size = .75,alpha = 5.0,color=”green”)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">figure</span><span class="p">::</span> <span class="o">../</span><span class="n">images</span><span class="o">/</span><span class="n">Screenshot</span><span class="o">.</span><span class="n">png</span>
+</pre></div>
+</div>
+</section>
+<section id="chromosome-9">
+<h1>Chromosome 9</h1>
+<p>CNV::CNV(file = “N3_100kbin.txt”,Chromosome = c(“Chr09”),mutantname = “con.2.NA”,controlname = “D2.2.NA”,size = .75,alpha = 5.0)</p>
+<figure class="align-default">
+<img alt="_images/Rplot01.png" src="_images/Rplot01.png" />
+</figure>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to CopyNumberVariantsSequenceAnalysis’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Michael Hall.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

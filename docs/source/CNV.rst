@@ -170,12 +170,14 @@ Download the r package rom PBGLMichael/CNVseq repository
 
 .. code:: shell
 
-devtools::install_github("PBGLMichaelHall/CNVseq")
+
 # Banana CNV
 setwd("/home/michael/Desktop/Banana/Banana_LC_WGS")
 devtools::install_github(repo = "PBGLMichaelHall/CNVseq",force = TRUE)
 library(CNV)
-CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025202.1","NC_025203.1","NC_025203.1","NC_025204.1","NC_025205.1","NC_025206.1","NC_025207.1","NC_025208.1","NC_025209.1","NC_025210.1","NC_025211.1","NC_025212.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = .25,color="green")
+CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025202.1","NC_025203.1","NC_025203.1","NC_025204.1","NC_025205.1",
+"NC_025206.1","NC_025207.1","NC_025208.1","NC_025209.1","NC_025210.1","NC_025211.1","NC_025212.1"),
+mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = .25,color="green")
 
 
 
@@ -187,7 +189,8 @@ Chromosome 5
 
 .. code:: shell
 
-CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025206.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = .25,color="green")
+CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025206.1"),mutantname = "Novaria.Naine",
+controlname = "Naine.Naine",size = .75,alpha = .25,color="green")
 
 
 
@@ -229,7 +232,8 @@ $python bin-by-sam_2.0.py -o N3_100kbin.txt -s 100000 -b -p 3 -c con-2_S1-Chrome
 
 .. code:: shell
 
-CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr04","Chr05","Chr09"),mutantname = "con.2.NA",controlname = "D2.2.NA",size = .75,alpha = 5.0,color="green")
+CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr04","Chr05","Chr09"),
+mutantname = "con.2.NA",controlname = "D2.2.NA",size = .75,alpha = 5.0,color="green")
 
 
 PLOT
@@ -247,7 +251,7 @@ Chromosome 9
 
 .. code:: shell
 
-CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr09"),mutantname = "con.2.NA",controlname = "D2.2.NA",size = .75,alpha = 5.0)
+CNV::CNV(file="N3_100kbin.txt",Chromosome=c("Chr09"),mutantname="con.2.NA",controlname="D2.2.NA",size=.75,alpha=5.0)
 
 
 .. figure:: ../images/Rplot01.png

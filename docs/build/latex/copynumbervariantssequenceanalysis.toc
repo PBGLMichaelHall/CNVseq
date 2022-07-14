@@ -1,10 +1,11 @@
 \babel@toc {english}{}
-\contentsline {section}{\numberline {1}Software Prerequisites}{2}{section.1}
-\contentsline {section}{\numberline {2}Rename FASTQ}{3}{section.2}
-\contentsline {section}{\numberline {3}Standard Output Clumpify python}{4}{section.3}
-\contentsline {section}{\numberline {4}Download Reference Genome NCBI}{5}{section.4}
-\contentsline {section}{\numberline {5}Download the r package rom PBGLMichael/CNVseq repository}{6}{section.5}
-\contentsline {section}{\numberline {6}Chromosome 5}{7}{section.6}
-\contentsline {section}{\numberline {7}bin\sphinxhyphen {}by\sphinxhyphen {}sam\_2.0.py python script}{8}{section.7}
-\contentsline {section}{\numberline {8}PLOT}{9}{section.8}
-\contentsline {section}{\numberline {9}Chromosome 9}{10}{section.9}
+\contentsline {section}{\numberline {1}CNVseq Analysis Banana and Sorghum}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Software Prerequisites}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Rename FASTQ}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Standard Output Clumpify python}{3}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Download Reference Genome NCBI}{3}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Download the r package rom PBGLMichael/CNVseq repository}{4}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Chromosome 5}{6}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}bin\sphinxhyphen {}by\sphinxhyphen {}sam\_2.0.py python script}{6}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.8}\sphinxstylestrong {Sorghum CNV}}{6}{subsection.1.8}
+\contentsline {subsection}{\numberline {1.9}Chromosome 9}{6}{subsection.1.9}

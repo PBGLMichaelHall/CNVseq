@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2022.1.24)  14 JUL 2022 12:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2022.1.24)  14 JUL 2022 14:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1210,148 +1210,102 @@ LaTeX Font Info:    Try loading font information for T1+qhv on input line 102.
  (/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
-(./copynumbervariantssequenceanalysis.toc)
-\tf@toc=\write6
-\openout6 = `copynumbervariantssequenceanalysis.toc'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--111
-[]\T1/qtm/m/n/10 ================================== CN-Vseq Anal-y-sis Ba-nana 
-and Sorghum
- []
-
-[1
-
-]<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 1.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(./copynumbervariantssequenceanalysis.toc<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<
+omx.cmap>>
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2
+))
+\tf@toc=\write6
+\openout6 = `copynumbervariantssequenceanalysis.toc'.
+
+ [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 194--197
-[]\T1/qtm/m/n/10 ./clumpify.sh in=Novaria.R1.fq.gz in2=Novaria.R2.fq.gz out=Nov
-aria.R1. dedup.fastq.gz
- []
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 140.
 
-[3
-
-] [4
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 242--247
-[]\T1/qtm/m/n/10 mkdir Ba-nanaGamma mv No-varia.R1.dedup.fastq.gz No-varia.R2.d
-edup.fastq.gz Ba-nanaGamma/ mv
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 283--287
-[]\T1/qtm/m/n/10 mv No-varia_aln.sam Naine_aln.sam Bin-by-Sam-tool/ cd Bin-by-S
-am-tool python bin-by-sam_2.0.py -o
- []
-
-[5
-
-]
-Overfull \hbox (59.5042pt too wide) in paragraph at lines 291--298
-\T1/qtm/m/n/10 de-v-tools::install_github(^^PPBGLMichaelHall/CNVseq^^Q) # Ba-na
-na CNV setwd(^^P/home/michael/Desktop/Banana/Banana_LC_WGS^^Q)
- []
-
-
-Overfull \hbox (536.23491pt too wide) in paragraph at lines 291--298
-\T1/qtm/m/n/10 ^^PN3_100kbin.txt^^Q,Chromosome = c(^^PNC_025202.1^^Q,^^QNC_0252
-03.1^^Q,^^QNC_025203.1^^Q,^^QNC_025204.1^^Q,^^QNC_025205.1^^Q,^^QNC_025206.1^^Q
-,^^QNC_025207.1^^Q,^^QNC_025208.1^^Q,^^QNC_025209.1^^Q,^^QNC_025210.1^^Q,^^QNC_
-025211.1^^Q,^^QNC_025212.1^^Q),mutantname
- []
-
-<777.png, id=93, 1874.50313pt x 1044.15094pt>
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 302.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
+LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10> not available
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 147.
+LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 178.
+ [2
+
+] [3]
+<777.png, id=91, 1874.50313pt x 1044.15094pt>
 File: 777.png Graphic file (type png)
 <use 777.png>
-Package pdftex.def Info: 777.png  used on input line 302.
+Package pdftex.def Info: 777.png  used on input line 286.
 (pdftex.def)             Requested size: 469.74013pt x 261.65846pt.
- [6
-
- <./777.png>]
-<Rplot777.png, id=101, 846.16125pt x 343.2825pt>
+<header.png, id=93, 556.32843pt x 325.215pt>
+File: header.png Graphic file (type png)
+<use header.png>
+Package pdftex.def Info: header.png  used on input line 292.
+(pdftex.def)             Requested size: 469.76598pt x 274.62775pt.
+<ge.png, id=94, 353.82187pt x 145.29282pt>
+File: ge.png Graphic file (type png)
+<use ge.png>
+Package pdftex.def Info: ge.png  used on input line 298.
+(pdftex.def)             Requested size: 353.821pt x 145.29245pt.
+ [4 <./777.png>] [5 <./header.png> <./ge.png>]
+<Rplot777.png, id=106, 846.16125pt x 343.2825pt>
 File: Rplot777.png Graphic file (type png)
 <use Rplot777.png>
-Package pdftex.def Info: Rplot777.png  used on input line 314.
+Package pdftex.def Info: Rplot777.png  used on input line 312.
 (pdftex.def)             Requested size: 469.75417pt x 190.57642pt.
-
-[7
-
- <./Rplot777.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 345--347
-[]\T1/qtm/m/n/10 CNV::CNV(file = ^^PN3_100kbin.txt^^Q,Chromosome = c(^^PChr04^^
-Q,^^QChr05^^Q,^^QChr09^^Q),mutantname =
- []
-
-[8
-
-]
-<Screenshot7.png, id=110, 1875.25594pt x 1043.39813pt>
-File: Screenshot7.png Graphic file (type png)
-<use Screenshot7.png>
-Package pdftex.def Info: Screenshot7.png  used on input line 354.
-(pdftex.def)             Requested size: 469.72849pt x 261.37428pt.
- [9
-
- <./Screenshot7.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 360--362
-\T1/qtm/m/n/10 CNV::CNV(file = ^^PN3_100kbin.txt^^Q,Chromosome = c(^^PChr09^^Q)
-,mutantname = ^^Pcon.2.NA^^Q,controlname =
- []
-
-<Rplot01.png, id=116, 846.16125pt x 343.2825pt>
+<SorghumCNV7.png, id=107, 1876.00874pt x 1042.64531pt>
+File: SorghumCNV7.png Graphic file (type png)
+<use SorghumCNV7.png>
+Package pdftex.def Info: SorghumCNV7.png  used on input line 345.
+(pdftex.def)             Requested size: 469.7453pt x 261.07433pt.
+<Rplot01.png, id=108, 846.16125pt x 343.2825pt>
 File: Rplot01.png Graphic file (type png)
 <use Rplot01.png>
-Package pdftex.def Info: Rplot01.png  used on input line 366.
+Package pdftex.def Info: Rplot01.png  used on input line 358.
 (pdftex.def)             Requested size: 469.75417pt x 190.57642pt.
-(./copynumbervariantssequenceanalysis.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 373.
- [10
+ (./copynumbervariantssequenceanalysis.ind)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 365.
 
- <./Rplot01.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 373.
-
-(./copynumbervariantssequenceanalysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 373.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 373.
+[6 <./Rplot777.png (PNG copy)>] [7 <./SorghumCNV7.png> <./Rplot01.png (PNG copy
+)>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 365.
+ (./copynumbervariantssequenceanalysis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 365.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 365.
 Package rerunfilecheck Info: File `copynumbervariantssequenceanalysis.out' has 
 not changed.
-(rerunfilecheck)             Checksum: 0921CED0AF3B370E39147DA50EC9D295;1494.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 373.
+(rerunfilecheck)             Checksum: DAC105853CEFD5AD7BD0BE3620A0C103;1884.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 365.
  ) 
 Here is how much of TeX's memory you used:
- 13880 strings out of 494923
- 194337 string characters out of 6180742
- 279427 words of memory out of 5000000
- 16849 multiletter control sequences out of 15000+600000
- 41027 words of font info for 36 fonts, out of 8000000 for 9000
+ 13916 strings out of 494923
+ 194966 string characters out of 6180742
+ 311571 words of memory out of 5000000
+ 16877 multiletter control sequences out of 15000+600000
+ 53692 words of font info for 43 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 37i,11n,45p,717b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texmf/fonts/t
-ype1/public/tex-gyre/qhvb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtm
-b.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf/
-fonts/type1/public/tex-gyre/qtmri.pfb>
-Output written on copynumbervariantssequenceanalysis.pdf (11 pages, 900219 byte
+ 37i,11n,45p,717b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf/fonts/type1/public/te
+x-gyre/qhvb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb></usr/sh
+are/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf/fonts/type1/pu
+blic/tex-gyre/qtmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfon
+ts/t1xbtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb>
+Output written on copynumbervariantssequenceanalysis.pdf (8 pages, 1001941 byte
 s).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 158 PDF objects out of 1000 (max. 8388607)
+ 122 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

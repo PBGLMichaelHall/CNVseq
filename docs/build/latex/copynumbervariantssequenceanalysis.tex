@@ -104,24 +104,16 @@ expressed do not necessarily reflect those of the International Atomic Energy Ag
 \phantomsection\label{\detokenize{index::doc}}
 
 
-\sphinxAtStartPar
-==================================
-CNVseq Analysis Banana and Sorghum
-==================================
-\begin{quote}\begin{description}
-\item[{Author}] \leavevmode
-\sphinxAtStartPar
-Michael Hall
 
-\item[{Date}] \leavevmode
-\sphinxAtStartPar
-07/14/2022
+\section{CNVseq Analysis Banana and Sorghum}
+\label{\detokenize{CNV:cnvseq-analysis-banana-and-sorghum}}\label{\detokenize{CNV::doc}}
 
-\end{description}\end{quote}
+\bigskip\hrule\bigskip
 
 
-\section{Software Prerequisites}
-\label{\detokenize{CNV:software-prerequisites}}\label{\detokenize{CNV::doc}}
+
+\subsection{Software Prerequisites}
+\label{\detokenize{CNV:software-prerequisites}}
 \sphinxAtStartPar
 \#Burrows\sphinxhyphen{}Wheeler\sphinxhyphen{}Aligner
 (\sphinxurl{http://bio-bwa.sourceforge.net/)(see} line 126).
@@ -145,39 +137,33 @@ p.117 \sphinxhyphen{} 127
 \sphinxAtStartPar
 \#Download sratools
 
-\sphinxAtStartPar
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
 srapath SRR11579627
 
-\sphinxAtStartPar
 prefetch SRR11579627
 
-\sphinxAtStartPar
-wget \sphinxurl{https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos3/sra-pub-run-21/SRR11579627/SRR11579627.1}
+wget https://sra\PYGZhy{}downloadb.be\PYGZhy{}md.ncbi.nlm.nih.gov/sos3/sra\PYGZhy{}pub\PYGZhy{}run\PYGZhy{}21/SRR11579627/SRR11579627.1
 
-\sphinxAtStartPar
-\#Convert SRA into fastq
+\PYG{c+c1}{\PYGZsh{}Convert SRA into fastq}
 
-\sphinxAtStartPar
-fastq\sphinxhyphen{}dump \textendash{}split\sphinxhyphen{}3 SRR11579627
+fastq\PYGZhy{}dump \PYGZhy{}\PYGZhy{}split\PYGZhy{}3 SRR11579627
 
-\sphinxAtStartPar
+
 srapath SRR11579628
 
-\sphinxAtStartPar
 prefetch SRR11579628
 
-\sphinxAtStartPar
-wget \sphinxurl{https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos3/sra-pub-run-21/SRR11579628/SRR11579628.1}
+wget https://sra\PYGZhy{}downloadb.be\PYGZhy{}md.ncbi.nlm.nih.gov/sos3/sra\PYGZhy{}pub\PYGZhy{}run\PYGZhy{}21/SRR11579628/SRR11579628.1
 
-\sphinxAtStartPar
-\#Convert SRA into fastq
+\PYG{c+c1}{\PYGZsh{}Convert SRA into fastq}
 
-\sphinxAtStartPar
-fastq\sphinxhyphen{}dump \textendash{}split\sphinxhyphen{}3 SRR11579628
+fastq\PYGZhy{}dump \PYGZhy{}\PYGZhy{}split\PYGZhy{}3 SRR11579628
+\end{sphinxVerbatim}
 
 
-\section{Rename FASTQ}
-\label{\detokenize{CNV:rename-fastq}}
+\subsection{Rename FASTQ}
+\label{\detokenize{CNV:rename-fastq}}\begin{quote}
+
 \sphinxAtStartPar
 \sphinxstylestrong{Naine.R1.fq.gz}
 \sphinxstylestrong{Naine.R2.fq.gz}
@@ -186,18 +172,20 @@ fastq\sphinxhyphen{}dump \textendash{}split\sphinxhyphen{}3 SRR11579628
 
 \sphinxAtStartPar
 \sphinxstylestrong{Run the clumpify python script to remove duplicates per sample.}
+\end{quote}
 
-\sphinxAtStartPar
-./clumpify.sh in=Naine.R1.fq.gz in2=Naine.R2.fq.gz out=Naine.R1.
-dedup.fastq.gz out2=Naine.R2.dedup.fastq.gz dedupe=t
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+./clumpify.sh \PYG{k}{in}\PYG{o}{=}Naine.R1.fq.gz \PYG{n+nv}{in2}\PYG{o}{=}Naine.R2.fq.gz \PYG{n+nv}{out}\PYG{o}{=}Naine.R1.
+dedup.fastq.gz \PYG{n+nv}{out2}\PYG{o}{=}Naine.R2.dedup.fastq.gz \PYG{n+nv}{dedupe}\PYG{o}{=}t
 
-\sphinxAtStartPar
-./clumpify.sh in=Novaria.R1.fq.gz in2=Novaria.R2.fq.gz out=Novaria.R1.
-dedup.fastq.gz out2=Novaria.R2.dedup.fastq.gz dedupe=t
+./clumpify.sh \PYG{k}{in}\PYG{o}{=}Novaria.R1.fq.gz \PYG{n+nv}{in2}\PYG{o}{=}Novaria.R2.fq.gz \PYG{n+nv}{out}\PYG{o}{=}Novaria.R1.
+dedup.fastq.gz \PYG{n+nv}{out2}\PYG{o}{=}Novaria.R2.dedup.fastq.gz \PYG{n+nv}{dedupe}\PYG{o}{=}t
+\end{sphinxVerbatim}
 
 
-\section{Standard Output Clumpify python}
-\label{\detokenize{CNV:standard-output-clumpify-python}}
+\subsection{Standard Output Clumpify python}
+\label{\detokenize{CNV:standard-output-clumpify-python}}\begin{quote}
+
 \sphinxAtStartPar
 Done!
 Time:                           31.447 seconds.
@@ -228,73 +216,69 @@ Duplicates Found:         2026
 Reads Out:             5998010
 Bases Out:          1837286910
 Total time:     50.222 seconds.
+\end{quote}
 
 
 \bigskip\hrule\bigskip
 
 
 
-\section{Download Reference Genome NCBI}
+\subsection{Download Reference Genome NCBI}
 \label{\detokenize{CNV:download-reference-genome-ncbi}}
 \sphinxAtStartPar
 \sphinxurl{https://www.ncbi.nlm.nih.gov/assembly/GCF\_000313855.2}
 
-\sphinxAtStartPar
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
 mkdir BananaGamma
 mv Novaria.R1.dedup.fastq.gz Novaria.R2.dedup.fastq.gz BananaGamma/
 mv Naine.R1.dedup.fastq.gz Naine.R2.dedup.fastq.gz BananaGamma/
-cd BananaGamma
+\PYG{n+nb}{cd} BananaGamma
 
-\sphinxAtStartPar
 mkdir Genome
-mv {\color{red}\bfseries{}*}.fna Genome/
-cd Genome bwa index {\color{red}\bfseries{}*}.fna
+mv *.fna Genome/
+\PYG{n+nb}{cd} Genome bwa index *.fna
 
-\sphinxAtStartPar
-cd ../
+\PYG{n+nb}{cd} ../
 
-\sphinxAtStartPar
-\sphinxurl{https://github.com/lh3/bwa}
+https://github.com/lh3/bwa
 
-\sphinxAtStartPar
-git clone \sphinxurl{https://github.com/lh3/bwa.git}
-cd bwa; make
+git clone https://github.com/lh3/bwa.git
+\PYG{n+nb}{cd} bwa\PYG{p}{;} make
 ./bwa
-\#Needs to be Harvard Version
+\PYG{c+c1}{\PYGZsh{}Needs to be Harvard Version}
 
-\sphinxAtStartPar
-./bwa mem \sphinxhyphen{}M \sphinxhyphen{}t 4 ../Genome/{\color{red}\bfseries{}*}.fna Novaria.R2.dedup.fq Novaria.R2.dedup.fq \textgreater{} Novaria.dedup.sam
+./bwa mem \PYGZhy{}M \PYGZhy{}t \PYG{l+m}{4} ../Genome/*.fna Novaria.R2.dedup.fq Novaria.R2.dedup.fq \PYGZgt{} Novaria.dedup.sam
 
-\sphinxAtStartPar
-./bwa mem \sphinxhyphen{}M \sphinxhyphen{}t 4 Genome/{\color{red}\bfseries{}*}.fna Naine.R1.dedup.fastq.gz Naine.R2.dedup.fastq.gz \textgreater{} Naine.dedup.sam
+./bwa mem \PYGZhy{}M \PYGZhy{}t \PYG{l+m}{4} Genome/*.fna Naine.R1.dedup.fastq.gz Naine.R2.dedup.fastq.gz \PYGZgt{} Naine.dedup.sam
 
-\sphinxAtStartPar
-samtools sort \sphinxhyphen{}O sam \sphinxhyphen{}T sam \sphinxhyphen{}T Novaria.sort \sphinxhyphen{}o Novaria\_aln.sam Novaria.dedup.sam
-samtools sort \sphinxhyphen{}O sam \sphinxhyphen{}T sam \sphinxhyphen{}T Naine.sort \sphinxhyphen{}o Naine\_aln.sam Naine.dedup.sam
+samtools sort \PYGZhy{}O sam \PYGZhy{}T sam \PYGZhy{}T Novaria.sort \PYGZhy{}o Novaria\PYGZus{}aln.sam Novaria.dedup.sam
+samtools sort \PYGZhy{}O sam \PYGZhy{}T sam \PYGZhy{}T Naine.sort \PYGZhy{}o Naine\PYGZus{}aln.sam Naine.dedup.sam
 
-\sphinxAtStartPar
-samtools view \sphinxhyphen{}b Novaria.dedup.sam \textgreater{} Novaria.bam
-samtools view \sphinxhyphen{}b Naine.dedup.sam \textgreater{} Naine.bam
+samtools view \PYGZhy{}b Novaria.dedup.sam \PYGZgt{} Novaria.bam
+samtools view \PYGZhy{}b Naine.dedup.sam \PYGZgt{} Naine.bam
 
-\sphinxAtStartPar
 samtools index Novaria.bam
 samtools index Naine.bam
 
-\sphinxAtStartPar
-mv Novaria\_aln.sam Naine\_aln.sam Bin\sphinxhyphen{}by\sphinxhyphen{}Sam\sphinxhyphen{}tool/
-cd Bin\sphinxhyphen{}by\sphinxhyphen{}Sam\sphinxhyphen{}tool
-python bin\sphinxhyphen{}by\sphinxhyphen{}sam\_2.0.py \sphinxhyphen{}o N3\_100kbin.txt \sphinxhyphen{}s 100000 \sphinxhyphen{}b \sphinxhyphen{}p 3 \sphinxhyphen{}c {\color{red}\bfseries{}Naine\_}.aln.sam
+mv Novaria\PYGZus{}aln.sam Naine\PYGZus{}aln.sam Bin\PYGZhy{}by\PYGZhy{}Sam\PYGZhy{}tool/
+\PYG{n+nb}{cd} Bin\PYGZhy{}by\PYGZhy{}Sam\PYGZhy{}tool
+python bin\PYGZhy{}by\PYGZhy{}sam\PYGZus{}2.0.py \PYGZhy{}o N3\PYGZus{}100kbin.txt \PYGZhy{}s \PYG{l+m}{100000} \PYGZhy{}b \PYGZhy{}p \PYG{l+m}{3} \PYGZhy{}c Naine\PYGZus{}.aln.sam
+\end{sphinxVerbatim}
 
 
-\section{Download the r package rom PBGLMichael/CNVseq repository}
+\subsection{Download the r package rom PBGLMichael/CNVseq repository}
 \label{\detokenize{CNV:download-the-r-package-rom-pbglmichael-cnvseq-repository}}
-\sphinxAtStartPar
-devtools::install\_github(“PBGLMichaelHall/CNVseq”)
-\# Banana CNV
-setwd(“/home/michael/Desktop/Banana/Banana\_LC\_WGS”)
-devtools::install\_github(repo = “PBGLMichaelHall/CNVseq”,force = TRUE)
-library(CNV)
-CNV::CNV(file = “N3\_100kbin.txt”,Chromosome =  c(“NC\_025202.1”,”NC\_025203.1”,”NC\_025203.1”,”NC\_025204.1”,”NC\_025205.1”,”NC\_025206.1”,”NC\_025207.1”,”NC\_025208.1”,”NC\_025209.1”,”NC\_025210.1”,”NC\_025211.1”,”NC\_025212.1”),mutantname = “Novaria.Naine”,controlname = “Naine.Naine”,size = .75,alpha = .25,color=”green”)
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Banana CNV}
+
+setwd\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}/home/michael/Desktop/Banana/Banana\PYGZus{}LC\PYGZus{}WGS\PYGZdq{}}\PYG{o}{)}
+devtools::install\PYGZus{}github\PYG{o}{(}\PYG{n+nv}{repo} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}PBGLMichaelHall/CNVseq\PYGZdq{}},force \PYG{o}{=} TRUE\PYG{o}{)}
+library\PYG{o}{(}CNV\PYG{o}{)}
+
+CNV::CNV\PYG{o}{(}\PYG{n+nv}{file} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}N3\PYGZus{}100kbin.txt\PYGZdq{}},Chromosome \PYG{o}{=}  c\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025202.1\PYGZdq{}},\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025203.1\PYGZdq{}},\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025203.1\PYGZdq{}},\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025204.1\PYGZdq{}},\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025205.1\PYGZdq{}},
+\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025206.1\PYGZdq{}},\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025207.1\PYGZdq{}},\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025208.1\PYGZdq{}},\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025209.1\PYGZdq{}},\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025210.1\PYGZdq{}},\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025211.1\PYGZdq{}},\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025212.1\PYGZdq{}}\PYG{o}{)},
+\PYG{n+nv}{mutantname} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Novaria.Naine\PYGZdq{}},controlname \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Naine.Naine\PYGZdq{}},size \PYG{o}{=} .75,alpha \PYG{o}{=} .25,color\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{o}{)}
+\end{sphinxVerbatim}
 
 \begin{figure}[htbp]
 \centering
@@ -302,11 +286,25 @@ CNV::CNV(file = “N3\_100kbin.txt”,Chromosome =  c(“NC\_025202.1”,”NC\_
 \noindent\sphinxincludegraphics{{777}.png}
 \end{figure}
 
+\begin{figure}[htbp]
+\centering
 
-\section{Chromosome 5}
+\noindent\sphinxincludegraphics{{header}.png}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+
+\noindent\sphinxincludegraphics{{ge}.png}
+\end{figure}
+
+
+\subsection{Chromosome 5}
 \label{\detokenize{CNV:chromosome-5}}
-\sphinxAtStartPar
-CNV::CNV(file = “N3\_100kbin.txt”,Chromosome =  c(“NC\_025206.1”),mutantname = “Novaria.Naine”,controlname = “Naine.Naine”,size = .75,alpha = .25,color=”green”)
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+CNV::CNV\PYG{o}{(}\PYG{n+nv}{file} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}N3\PYGZus{}100kbin.txt\PYGZdq{}},Chromosome \PYG{o}{=}  c\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}NC\PYGZus{}025206.1\PYGZdq{}}\PYG{o}{)},mutantname \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Novaria.Naine\PYGZdq{}},
+\PYG{n+nv}{controlname} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Naine.Naine\PYGZdq{}},size \PYG{o}{=} .75,alpha \PYG{o}{=} .25,color\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{o}{)}
+\end{sphinxVerbatim}
 
 \begin{figure}[htbp]
 \centering
@@ -314,51 +312,45 @@ CNV::CNV(file = “N3\_100kbin.txt”,Chromosome =  c(“NC\_025206.1”),mutant
 \noindent\sphinxincludegraphics{{Rplot777}.png}
 \end{figure}
 
-\sphinxAtStartPar
-\sphinxstylestrong{You have two BAM files one is a “mutant” and the other is a “control”}
-
-\sphinxAtStartPar
-\sphinxstylestrong{First convert BAM to SAM}
-\sphinxstylestrong{The sam file must have an ending \_aln.sam to work properly in python script}
-
-\sphinxAtStartPar
-\sphinxstylestrong{CONTROL}
-
-\sphinxAtStartPar
-samtools view \sphinxhyphen{}h con\sphinxhyphen{}2\_S1\sphinxhyphen{}Chromes\sphinxhyphen{}04\sphinxhyphen{}05\sphinxhyphen{}09.bam \textgreater{} con\sphinxhyphen{}2\_S1\sphinxhyphen{}Chromes\sphinxhyphen{}04\sphinxhyphen{}05\sphinxhyphen{}09\_aln.sam
-
-\sphinxAtStartPar
-\sphinxstylestrong{MUTANT}
-
-\sphinxAtStartPar
-samtools view \sphinxhyphen{}h D2\sphinxhyphen{}1\_S7\sphinxhyphen{}Chromes\sphinxhyphen{}04\sphinxhyphen{}05\sphinxhyphen{}09.bam \textgreater{} D2\sphinxhyphen{}1\_S7\sphinxhyphen{}Chromes\sphinxhyphen{}04\sphinxhyphen{}05\sphinxhyphen{}09\_aln.sam
 
 
-\section{bin\sphinxhyphen{}by\sphinxhyphen{}sam\_2.0.py python script}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+samtools view \PYGZhy{}h con\PYGZhy{}2\PYGZus{}S1\PYGZhy{}Chromes\PYGZhy{}04\PYGZhy{}05\PYGZhy{}09.bam \PYGZgt{} con\PYGZhy{}2\PYGZus{}S1\PYGZhy{}Chromes\PYGZhy{}04\PYGZhy{}05\PYGZhy{}09\PYGZus{}aln.sam
+
+**MUTANT**
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+samtools view \PYGZhy{}h D2\PYGZhy{}1\PYGZus{}S7\PYGZhy{}Chromes\PYGZhy{}04\PYGZhy{}05\PYGZhy{}09.bam \PYGZgt{} D2\PYGZhy{}1\PYGZus{}S7\PYGZhy{}Chromes\PYGZhy{}04\PYGZhy{}05\PYGZhy{}09\PYGZus{}aln.sam
+\end{sphinxVerbatim}
+
+
+\subsection{bin\sphinxhyphen{}by\sphinxhyphen{}sam\_2.0.py python script}
 \label{\detokenize{CNV:bin-by-sam-2-0-py-python-script}}
-\sphinxAtStartPar
-\$python bin\sphinxhyphen{}by\sphinxhyphen{}sam\_2.0.py \sphinxhyphen{}o N3\_100kbin.txt \sphinxhyphen{}s 100000 \sphinxhyphen{}b \sphinxhyphen{}p 3 \sphinxhyphen{}c con\sphinxhyphen{}2\_S1\sphinxhyphen{}Chromes\sphinxhyphen{}04\sphinxhyphen{}05\sphinxhyphen{}09\_aln.sam
-
-\sphinxAtStartPar
-\sphinxstylestrong{Sorghum CNV}
-
-\sphinxAtStartPar
-CNV::CNV(file = “N3\_100kbin.txt”,Chromosome = c(“Chr04”,”Chr05”,”Chr09”),mutantname = “con.2.NA”,controlname = “D2.2.NA”,size = .75,alpha = 5.0,color=”green”)
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n+nv}{\PYGZdl{}python} bin\PYGZhy{}by\PYGZhy{}sam\PYGZus{}2.0.py \PYGZhy{}o N3\PYGZus{}100kbin.txt \PYGZhy{}s \PYG{l+m}{100000} \PYGZhy{}b \PYGZhy{}p \PYG{l+m}{3} \PYGZhy{}c con\PYGZhy{}2\PYGZus{}S1\PYGZhy{}Chromes\PYGZhy{}04\PYGZhy{}05\PYGZhy{}09\PYGZus{}aln.sam
+\end{sphinxVerbatim}
 
 
-\section{PLOT}
-\label{\detokenize{CNV:plot}}
+\subsection{\sphinxstylestrong{Sorghum CNV}}
+\label{\detokenize{CNV:sorghum-cnv}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+CNV::CNV\PYG{o}{(}\PYG{n+nv}{file} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}N3\PYGZus{}100kbin.txt\PYGZdq{}},Chromosome \PYG{o}{=} c\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}Chr04\PYGZdq{}},\PYG{l+s+s2}{\PYGZdq{}Chr05\PYGZdq{}},\PYG{l+s+s2}{\PYGZdq{}Chr09\PYGZdq{}}\PYG{o}{)},
+\PYG{n+nv}{mutantname} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}con.2.NA\PYGZdq{}},controlname \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}D2.2.NA\PYGZdq{}},size \PYG{o}{=} .75,alpha \PYG{o}{=} \PYG{l+m}{5}.0,color\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{o}{)}
+\end{sphinxVerbatim}
+
 \begin{figure}[htbp]
 \centering
 
-\noindent\sphinxincludegraphics{{Screenshot7}.png}
+\noindent\sphinxincludegraphics{{SorghumCNV7}.png}
 \end{figure}
 
 
-\section{Chromosome 9}
+\subsection{Chromosome 9}
 \label{\detokenize{CNV:chromosome-9}}
-\sphinxAtStartPar
-CNV::CNV(file = “N3\_100kbin.txt”,Chromosome = c(“Chr09”),mutantname = “con.2.NA”,controlname = “D2.2.NA”,size = .75,alpha = 5.0)
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+CNV::CNV\PYG{o}{(}\PYG{n+nv}{file}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}N3\PYGZus{}100kbin.txt\PYGZdq{}},Chromosome\PYG{o}{=}c\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}Chr09\PYGZdq{}}\PYG{o}{)},mutantname\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}con.2.NA\PYGZdq{}},controlname\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}D2.2.NA\PYGZdq{}},size\PYG{o}{=}.75,alpha\PYG{o}{=}\PYG{l+m}{5}.0\PYG{o}{)}
+\end{sphinxVerbatim}
 
 \begin{figure}[htbp]
 \centering

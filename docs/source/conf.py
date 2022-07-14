@@ -77,7 +77,7 @@ latex_maketitle = r'''
         \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page
         \begin{titlepage}
             \vspace*{10mm} %%% * is used to give space from top
-            \flushright\textbf{\Huge {Oxford Nanopore Quality Control Work Flow v1.0\\}}
+            \flushright\textbf{\Huge {CopyNumberVariantsSequenceAnalysis\\}}
             \vspace{0mm} %%% * is used to give space from top
             \textbf{\Large {A Step-by-Step Guide\\}}
             \vspace{0mm} %%% * is used to give space from top
@@ -91,9 +91,9 @@ latex_maketitle = r'''
             \vspace{0mm}
             \textbf{\Large {Seibersdorf, Austria\\}}
 	    \vspace{10mm}
-            \normalsize Created: June, 2022\\
+            \normalsize Created: July, 2022\\
             \vspace*{0mm}
-            \normalsize  Last updated: 28 June 2022
+            \normalsize  Last updated: 14 July 2022
             %% \vfill adds at the bottom
             \vfill
             \small\flushleft {{\textbf {Please note:}} \textit {This is not an official IAEA publication but is made available as working material. The material has not undergone an official review by the IAEA. The views

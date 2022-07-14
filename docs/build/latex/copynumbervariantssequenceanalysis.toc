@@ -1,0 +1,10 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Software Prerequisites}{2}{section.1}
+\contentsline {section}{\numberline {2}Rename FASTQ}{3}{section.2}
+\contentsline {section}{\numberline {3}Standard Output Clumpify python}{4}{section.3}
+\contentsline {section}{\numberline {4}Download Reference Genome NCBI}{5}{section.4}
+\contentsline {section}{\numberline {5}Download the r package rom PBGLMichael/CNVseq repository}{6}{section.5}
+\contentsline {section}{\numberline {6}Chromosome 5}{7}{section.6}
+\contentsline {section}{\numberline {7}bin\sphinxhyphen {}by\sphinxhyphen {}sam\_2.0.py python script}{8}{section.7}
+\contentsline {section}{\numberline {8}PLOT}{9}{section.8}
+\contentsline {section}{\numberline {9}Chromosome 9}{10}{section.9}

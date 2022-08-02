@@ -155,7 +155,8 @@ CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025202.1","NC_025203.1","NC
 
 
 ```
-![777](https://user-images.githubusercontent.com/93121277/177731532-046119d9-b802-4fa1-af91-a88e4eff7022.png)
+
+![allchrom](https://user-images.githubusercontent.com/93121277/182371635-17ef6765-35d1-4f2d-a48c-0b60f540b921.png)
 
 
 # Now Chromosome 5
@@ -166,8 +167,9 @@ CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025206.1"),mutantname = "No
 
 ```
 
+![chrom5](https://user-images.githubusercontent.com/93121277/182371880-7d171c23-b438-4f01-8e8e-2533db33270c.png)
 
-![Rplot777](https://user-images.githubusercontent.com/93121277/177731971-698c6ff6-bce9-4442-8d12-310344da5d37.png)
+
 
 
 

@@ -124,15 +124,15 @@ cd bwa; make
 ./bwa
 #Needs to be Harvard Version
 
-./bwa mem -M -t 4 ../Genome/*.fna Novaria.R2.dedup.fq Novaria.R2.dedup.fq > Novaria.dedup.sam
+./bwa mem -R '@RG\tID:Novaria \tSM: Novaria' -M -t 4 ../Genome/*.fna Novaria.R2.dedup.fq Novaria.R2.dedup.fq > Novaria.dedup.sam
 
-./bwa mem -M -t 4 Genome/*.fna Naine.R1.dedup.fastq.gz Naine.R2.dedup.fastq.gz > Naine.dedup.sam
+./bwa mem -R '@RG\tID:Naine \tSM: Naine' -M -t 4 Genome/*.fna Naine.R1.dedup.fastq.gz Naine.R2.dedup.fastq.gz > Naine.dedup.sam
 
 samtools sort -O sam -T sam -T Novaria.sort -o Novaria_aln.sam Novaria.dedup.sam
 samtools sort -O sam -T sam -T Naine.sort -o Naine_aln.sam Naine.dedup.sam
 
-samtools view -b Novaria.dedup.sam > Novaria.bam
-samtools view -b Naine.dedup.sam > Naine.bam
+samtools view -b Novaria_aln.sam > Novaria.bam
+samtools view -b Naine_aln.sam > Naine.bam
 
 samtools index Novaria.bam
 samtools index Naine.bam

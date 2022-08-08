@@ -203,7 +203,7 @@ Chromosome 5
 
 .. figure:: ../images/Rplot777.png
 
-
+===============
 **Sorghum CNV**
 ===============
 

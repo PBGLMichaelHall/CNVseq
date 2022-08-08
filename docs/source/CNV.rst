@@ -189,7 +189,7 @@ Download the r package rom PBGLMichael/CNVseq repository
 
 .. figure:: ../images/BANANA100K.png
 
-.. figure:: ../images/ge.png
+
 
 Chromosome 5
 ============

@@ -187,7 +187,7 @@ Download the r package rom PBGLMichael/CNVseq repository
 
 .. figure:: ../images/777.png
 
-.. figure:: ../images/header.png
+.. figure:: ../images/BANANA100K.png
 
 .. figure:: ../images/ge.png
 

@@ -204,6 +204,8 @@ Chromosome 5
 .. figure:: ../images/Rplot777.png
 
 
+**Sorghum CNV**
+===============
 
 .. raw:: html
 
@@ -237,8 +239,7 @@ bin-by-sam_2.0.py python script
 
 
 
-**Sorghum CNV**
-===============
+
 
 .. code:: shell
 

@@ -141,21 +141,25 @@ https://www.ncbi.nlm.nih.gov/assembly/GCF_000313855.2
 	cd ../
 
 	https://github.com/lh3/bwa
-
+        
+	#It is recommended not to download bwa software from source a.k.a github but rather through bioconda channel in conda
+	#conda install -c bioconda bwa=0.7.17
+	
+	#Another way to get bwa software but do not necessarily use it.
 	git clone https://github.com/lh3/bwa.git
 	cd bwa; make
 	./bwa
 	#Needs to be Harvard Version
+	
+        ./bwa mem -M -t 4 -R '@RG\tID:Novaria \tSM: Novaria' ../Genome/*.fna Novaria.R1.dedup.fq Novaria.R2.dedup.fq > Novaria.dedup.sam
 
-	./bwa mem -M -t 4 ../Genome/*.fna Novaria.R2.dedup.fq Novaria.R2.dedup.fq > Novaria.dedup.sam
-
-	./bwa mem -M -t 4 Genome/*.fna Naine.R1.dedup.fastq.gz Naine.R2.dedup.fastq.gz > Naine.dedup.sam
+	./bwa mem -M -t 4 -R '@RG\tID:Naine \tSM: Naine' ../Genome/*.fna Naine.R1.dedup.fastq.gz Naine.R2.dedup.fastq.gz > Naine.dedup.sam
 
 	samtools sort -O sam -T sam -T Novaria.sort -o Novaria_aln.sam Novaria.dedup.sam
 	samtools sort -O sam -T sam -T Naine.sort -o Naine_aln.sam Naine.dedup.sam
 
-	samtools view -b Novaria.dedup.sam > Novaria.bam
-	samtools view -b Naine.dedup.sam > Naine.bam
+	samtools view -b Novaria_aln.sam > Novaria.bam
+	samtools view -b Naine_aln.sam > Naine.bam
 
 	samtools index Novaria.bam
 	samtools index Naine.bam

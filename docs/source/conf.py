@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'CopyNumberVariantsSequenceAnalysis'
+project = 'Data Analysis of Mutation Detection in Gamma-Irradiated Banana Using Low Copy Number Variation'
 copyright = '2022, Michael Hall'
 author = 'Michael Hall'
 

@@ -77,7 +77,7 @@ latex_maketitle = r'''
         \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page
         \begin{titlepage}
             \vspace*{10mm} %%% * is used to give space from top
-            \flushright\textbf{\Huge {CopyNumberVariantsSequenceAnalysis\\}}
+            \flushright\textbf{\Huge {Data Analysis of Mutation Detection in Gamma-Irradiated Banana Using Low Copy Number Variation\\}}
             \vspace{0mm} %%% * is used to give space from top
             \textbf{\Large {A Step-by-Step Guide\\}}
             \vspace{0mm} %%% * is used to give space from top

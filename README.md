@@ -151,24 +151,24 @@ devtools::install_github("PBGLMichaelHall/CNVseq")
 setwd("/home/michael/Desktop/Banana/Banana_LC_WGS")
 devtools::install_github(repo = "PBGLMichaelHall/CNVseq",force = TRUE)
 library(CNV)
-CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025202.1","NC_025203.1","NC_025203.1","NC_025204.1","NC_025205.1","NC_025206.1","NC_025207.1","NC_025208.1","NC_025209.1","NC_025210.1","NC_025211.1","NC_025212.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = .25,color="green")
+CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025202.1","NC_025203.1","NC_025203.1","NC_025204.1","NC_025205.1","NC_025206.1","NC_025207.1","NC_025208.1","NC_025209.1","NC_025210.1","NC_025211.1","NC_025212.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = 5,color="orange")
 
 
 ```
+![Rplot02](https://user-images.githubusercontent.com/93121277/192494210-4d701445-b342-40e1-8ba4-956a4abb8102.png)
 
-![allchrom](https://user-images.githubusercontent.com/93121277/182371635-17ef6765-35d1-4f2d-a48c-0b60f540b921.png)
 
 
 # Now Chromosome 5
 
 ```r 
 
-CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025206.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = .25,color="green")
+CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025206.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = 5,color="orange")
 
 ```
 
-![chrom5](https://user-images.githubusercontent.com/93121277/182371880-7d171c23-b438-4f01-8e8e-2533db33270c.png)
 
+![Rplot03](https://user-images.githubusercontent.com/93121277/192494237-f00b71f2-6a4d-4cab-a420-835f94755ba1.png)
 
 
 

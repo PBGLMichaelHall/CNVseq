@@ -196,14 +196,14 @@ $python bin-by-sam_2.0.py -o N3_100kbin.txt -s 100000 -b -p 3 -c con-2_S1-Chrome
 
 #Sorghum CNV
 setwd("/home/michael/Desktop/SorghumBinBySam")
-CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr04","Chr05","Chr09"),mutantname = "con.2.NA",controlname = "D2.2.NA",size = .75,alpha = 5.0,color="green")
+CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr04","Chr05","Chr09"),mutantname = "con.2.NA",controlname = "D2.2.NA",size = .75,alpha = 5.0,color="orange")
 
 
 
 ```
 
-![Screenshot from 2022-07-07 10-47-11](https://user-images.githubusercontent.com/93121277/177732226-d01f0a94-76c4-4a94-b95b-efff8d06369f.png)
 
+![Rplot01](https://user-images.githubusercontent.com/93121277/192491141-fb7abf07-b5e4-4da5-94b3-4da92e97e1e7.png)
 
 
 
@@ -214,9 +214,7 @@ CNV::CNV(file = "N3_100kbin.txt",Chromosome = c("Chr09"),mutantname = "con.2.NA"
 
 ```
 
-
-![Rplot01](https://user-images.githubusercontent.com/93121277/177732470-bb9f650a-7595-428d-95b8-34f300c561a2.png)
-
+![Rplot](https://user-images.githubusercontent.com/93121277/192490812-3007d1fd-5c8f-4c49-8a73-49981e50a869.png)
 
 
 

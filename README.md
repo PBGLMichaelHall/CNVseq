@@ -151,6 +151,8 @@ devtools::install_github("PBGLMichaelHall/CNVseq")
 setwd("/home/michael/Desktop/Banana/Banana_LC_WGS")
 devtools::install_github(repo = "PBGLMichaelHall/CNVseq",force = TRUE)
 library(CNV)
+library(dplyr)
+library(ggplot2)
 CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025202.1","NC_025203.1","NC_025203.1","NC_025204.1","NC_025205.1","NC_025206.1","NC_025207.1","NC_025208.1","NC_025209.1","NC_025210.1","NC_025211.1","NC_025212.1"),mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = 5,color="orange")
 
 

@@ -248,7 +248,7 @@ bin-by-sam_2.0.py python script
 
 
 
-.. figure:: ../images/Rplot01.png
+.. figure:: ../images/Rplot99.png
 
 
 

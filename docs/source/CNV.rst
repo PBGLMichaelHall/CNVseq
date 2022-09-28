@@ -183,7 +183,7 @@ Download the r package rom PBGLMichael/CNVseq repository
 
 	CNV::CNV(file = "N3_100kbin.txt",Chromosome =  c("NC_025202.1","NC_025203.1","NC_025203.1","NC_025204.1","NC_025205.1",
 	"NC_025206.1","NC_025207.1","NC_025208.1","NC_025209.1","NC_025210.1","NC_025211.1","NC_025212.1"),
-	mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = .25,color="green")
+	mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = 5,color="orange")
 
 .. figure:: ../images/777.png
 

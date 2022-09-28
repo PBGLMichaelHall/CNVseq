@@ -185,7 +185,7 @@ Download the r package rom PBGLMichael/CNVseq repository
 	"NC_025206.1","NC_025207.1","NC_025208.1","NC_025209.1","NC_025210.1","NC_025211.1","NC_025212.1"),
 	mutantname = "Novaria.Naine",controlname = "Naine.Naine",size = .75,alpha = 5,color="orange")
 
-.. figure:: ../images/777.png
+.. figure:: ../images/Rplot02.png
 
 .. figure:: ../images/BANANA100K.png
 
@@ -201,7 +201,7 @@ Chromosome 5
 
 
 
-.. figure:: ../images/Rplot777.png
+.. figure:: ../images/Rplot03.png
 
 ===============
 **Sorghum CNV**
@@ -248,7 +248,7 @@ bin-by-sam_2.0.py python script
 
 
 
-.. figure:: ../images/SorghumCNV7.png
+.. figure:: ../images/Rplot01.png
 
 
 
@@ -262,4 +262,4 @@ Chromosome 9
 
 
 
-.. figure:: ../images/Rplot01.png
+.. figure:: ../images/Rplot.png
